@@ -208,7 +208,7 @@ class PostfixLogParser:
             if self.REJECT_LINE in log_line:
                 self.process_reject_line(log_line)
         except ParseException, e:
-            self.process_unknown(log_line)
+            self.process_unknown(line)
             return True
 
     def process_client_line(self, log_line):
