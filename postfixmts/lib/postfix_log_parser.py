@@ -195,7 +195,6 @@ class PostfixLogParser:
         try:
             log_line = self.log_line.parseString(line[:-1])
             log_line = self.fix_datetime(log_line)
-            print line,
             if self.CLIENT_LINE in log_line:
                 self.process_client_line(log_line)
             if self.MSG_ID_LINE in log_line:
@@ -209,7 +208,7 @@ class PostfixLogParser:
             if self.REJECT_LINE in log_line:
                 self.process_reject_line(log_line)
         except ParseException, e:
-            print 'XXX', line, e
+            self.process_unknown(log_line)
             return True
 
     def process_client_line(self, log_line):
@@ -229,6 +228,9 @@ class PostfixLogParser:
 
     def process_reject_line(self, log_line):
         print log_line
+
+    def process_unknown(self, log_line):
+        print 'UNKNOWN', log_line
 
 
 if __name__ == '__main__':
