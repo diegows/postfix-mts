@@ -109,7 +109,7 @@ class ClientLine(DeclarativeBase):
 
     date = Column(Date, default=date.today)
 
-    time = Column(Date, default = 0)
+    time = Column(Time, default = 0)
 
     hostname = Column(Unicode(120), nullable = False)
 
@@ -136,7 +136,7 @@ class MsgIdLine(DeclarativeBase):
 
     date = Column(Date, default=date.today)
 
-    time = Column(Date, default = 0)
+    time = Column(Time, default = 0)
 
     hostname = Column(Unicode(120), nullable = False)
 
@@ -156,7 +156,7 @@ class FromLine(DeclarativeBase):
 
     date = Column(Date, default=date.today)
 
-    time = Column(Date, default = 0)
+    time = Column(Time, default = 0)
 
     hostname = Column(Unicode(120), nullable = False)
 
@@ -182,7 +182,7 @@ class SentLine(DeclarativeBase):
 
     date = Column(Date, default=date.today)
 
-    time = Column(Date, default = 0)
+    time = Column(Time, default = 0)
 
     hostname = Column(Unicode(120), nullable = False)
 
@@ -224,7 +224,7 @@ class HostFailLine(DeclarativeBase):
 
     date = Column(Date, default=date.today)
 
-    time = Column(Date, default = 0)
+    time = Column(Time, default = 0)
 
     hostname = Column(Unicode(120), nullable = False)
 
@@ -247,7 +247,7 @@ class RejectLine(DeclarativeBase):
 
     date = Column(Date, default=date.today)
 
-    time = Column(Date, default = 0)
+    time = Column(Time, default = 0)
 
     hostname = Column(Unicode(120), nullable = False)
 
